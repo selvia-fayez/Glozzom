@@ -1,0 +1,261 @@
+@import "./var";
+@import "./reset";
+
+
+nav{
+    height: 10vh;
+    @include DisplayFlex(row, nowrap, space-between, center, center);
+    background-color: $second-color;
+    .nav-container{
+        width: 100%;
+        margin: 0 6.5rem;
+        @include DisplayFlex(row,nowrap,space-between,center,center);
+        p{
+            cursor: pointer;
+            font-size: map-get($map: $font-size, $key: md);
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            li{
+                padding: 0.7rem;
+                opacity: 0.5;
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: white;
+                }
+                &:first-child{
+                opacity: 1;
+                }
+            }
+        }
+    }
+}
+.content{
+    width: 100%;
+    height: 80vh;
+    background-image: url(../../img/image1.jpg);
+    background-size: cover;
+    @include DisplayFlex("",wrap,center,center,center);
+    .text{
+    @include DisplayFlex(column, "", "", center, "");
+    text-align: center;
+    width: 70%;
+    h1{
+        font-size: map-get($map: $font-size, $key: xl);
+        font-weight: 100;
+    }
+    p{
+        margin: 1rem 0;
+        font-size: map-get($map: $font-size, $key:sm);
+    }
+    button{
+        width: 20%;
+        height: 3rem;
+        font-size: map-get($map: $font-size, $key: sm);
+        border-radius: 0.6rem;
+        border: none;
+        color: white;
+        background-color: $primary-color;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    }
+}
+.section1 {
+    width: 100%;
+    height: 50vh;
+    color: black;
+    @include DisplayFlex(row, wrap, center, center, center);
+
+    .section {
+        width: 25%;
+        @include DisplayFlex(column, "", "", center, "");
+        text-align: center;
+        gap: 1rem;
+        img{
+            width: 20%;
+        }
+    }
+}
+.section2{
+    width: 100%;
+    height: 30vh;
+    background-image: url(../../img/lights.jpg);
+    background-size: cover;
+    @include DisplayFlex(row, wrap, center, center, center);
+    text-align: center;
+    p{
+      padding: 0.5rem;
+    }
+}
+.container{
+    width: 100%;
+    height: 80vh;
+    color: black;
+    display: flex;
+    align-items: center;
+    .text, .image{
+        width: 50%;
+    }
+    .image {
+        margin-right: 6.5rem;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .text{
+        margin-left: 6.5rem;
+        p{
+        padding: 1rem 0;
+        }
+        button{
+        width: 25%;
+        height: 3rem;
+        font-size: map-get($map: $font-size, $key: sm);
+        border-radius: 0.4rem;
+        border: 0.1rem $primary-color solid;
+        color: $primary-color;
+        background-color: transparent;
+        cursor: pointer;
+    
+        &:hover {
+            opacity: 0.7;
+        }
+        }
+    }
+}
+.section3{
+    height: 80vh;
+    display: grid;
+    gap: 2rem;
+    margin: 3rem;
+    grid-template-columns: repeat(3,1fr);
+    .section{
+        text-align: center;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        @include DisplayFlex(column,nowrap,space-evenly,center,"");
+        img{
+            width: 20%;
+        }
+        &:nth-child(even){
+            background-color: $second-color;
+        }
+        &:nth-child(odd){
+            background-color: $primary-color;
+        }
+    }
+}
+.section4{
+    width: 100%;
+    height: 40vh;
+    background-image: url(../../img/media.jpg);
+    background-size: cover;
+    text-align: center;
+    .image{
+        background-color: rgba(0, 0, 0, 0.527);
+        height: 100%;
+        @include DisplayFlex(row, wrap, center, center, center);
+    }
+    img{
+        width: 40%;
+        height: 40%;
+    }
+}
+.section5{
+    color: black;
+    @include DisplayFlex(column,"","","","");
+    text-align: center;
+    margin: 3rem;
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+        margin: 3rem;
+        img{
+            width: 100%;
+            height: 60vh;
+        }
+    }
+}
+.footer{
+    width: 100%;
+    height: 70vh;
+    background-color: $second-color;
+    @include DisplayFlex(column, wrap, center, center, center);
+    .staff{
+        width: 100%;
+        margin-top: 2rem;
+        @include DisplayFlex(row,"",center,center,center);
+        .person{
+            @include DisplayFlex(column,"", "",center,"");
+            width: 25%;
+            img{
+                border-radius: 50%;
+                width: 50%;
+            }
+            p{
+                font-size: 13px;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+@media (max-width:700px) {
+    nav .nav-container {
+        margin: 0;
+        ul li a{
+            text-transform: capitalize;
+        }
+        
+    }
+    .content .text button{
+        width: 50%;
+    }
+    .section1{
+        height: auto;
+        margin: 2rem 0;
+        .section{
+            width: 100%;
+        }
+    }
+    .container{
+        height: auto;
+        margin: 2rem 0;
+        .text{
+            margin:0 3rem;
+            button{
+                width: 50%;
+            }
+        }
+        .image{
+            margin: 0.5rem;
+        }
+    }
+    .section3 {
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        .section{
+            padding: 1rem;
+        }
+    }
+    .section5 .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer {
+        height: auto;
+        padding: 0.5rem;
+        .staff {
+            flex-direction: column;
+            .person {
+                width: 100%;
+                margin: 0.5rem;
+            }
+        }
+    }
+}

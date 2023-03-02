@@ -1,0 +1,13 @@
+$primary-color: rgb(219, 39, 39);
+$second-color: rgb(71, 71, 71);
+$font-size:("sm":18px,
+"md":24px,"lg":28px, "xl":60px
+);
+@mixin DisplayFlex($direction:"row",$wrap:"nowrap",$justify,$alignitems,$aligncontent){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $alignitems;
+    align-content: $aligncontent;
+}

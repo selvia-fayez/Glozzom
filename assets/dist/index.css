@@ -1,0 +1,342 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  font-size: 16px;
+  color: white;
+}
+
+nav {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: rgb(71, 71, 71);
+}
+nav .nav-container {
+  width: 100%;
+  margin: 0 6.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+nav .nav-container p {
+  cursor: pointer;
+  font-size: 24px;
+}
+nav .nav-container ul {
+  display: flex;
+  list-style: none;
+}
+nav .nav-container ul li {
+  padding: 0.7rem;
+  opacity: 0.5;
+}
+nav .nav-container ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+nav .nav-container ul li:first-child {
+  opacity: 1;
+}
+
+.content {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../../img/image1.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: "";
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.content .text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: "";
+  justify-content: "";
+  align-items: center;
+  align-content: "";
+  text-align: center;
+  width: 70%;
+}
+.content .text h1 {
+  font-size: 60px;
+  font-weight: 100;
+}
+.content .text p {
+  margin: 1rem 0;
+  font-size: 18px;
+}
+.content .text button {
+  width: 20%;
+  height: 3rem;
+  font-size: 18px;
+  border-radius: 0.6rem;
+  border: none;
+  color: white;
+  background-color: rgb(219, 39, 39);
+  cursor: pointer;
+}
+.content .text button:hover {
+  opacity: 0.7;
+}
+
+.section1 {
+  width: 100%;
+  height: 50vh;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.section1 .section {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: "";
+  justify-content: "";
+  align-items: center;
+  align-content: "";
+  text-align: center;
+  gap: 1rem;
+}
+.section1 .section img {
+  width: 20%;
+}
+
+.section2 {
+  width: 100%;
+  height: 30vh;
+  background-image: url(../../img/lights.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+.section2 p {
+  padding: 0.5rem;
+}
+
+.container {
+  width: 100%;
+  height: 80vh;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.container .text, .container .image {
+  width: 50%;
+}
+.container .image {
+  margin-right: 6.5rem;
+}
+.container img {
+  width: 100%;
+  height: 100%;
+}
+.container .text {
+  margin-left: 6.5rem;
+}
+.container .text p {
+  padding: 1rem 0;
+}
+.container .text button {
+  width: 25%;
+  height: 3rem;
+  font-size: 18px;
+  border-radius: 0.4rem;
+  border: 0.1rem rgb(219, 39, 39) solid;
+  color: rgb(219, 39, 39);
+  background-color: transparent;
+  cursor: pointer;
+}
+.container .text button:hover {
+  opacity: 0.7;
+}
+
+.section3 {
+  height: 80vh;
+  display: grid;
+  gap: 2rem;
+  margin: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.section3 .section {
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: "";
+}
+.section3 .section img {
+  width: 20%;
+}
+.section3 .section:nth-child(even) {
+  background-color: rgb(71, 71, 71);
+}
+.section3 .section:nth-child(odd) {
+  background-color: rgb(219, 39, 39);
+}
+
+.section4 {
+  width: 100%;
+  height: 40vh;
+  background-image: url(../../img/media.jpg);
+  background-size: cover;
+  text-align: center;
+}
+.section4 .image {
+  background-color: rgba(0, 0, 0, 0.527);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.section4 img {
+  width: 40%;
+  height: 40%;
+}
+
+.section5 {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: "";
+  justify-content: "";
+  align-items: "";
+  align-content: "";
+  text-align: center;
+  margin: 3rem;
+}
+.section5 .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem;
+}
+.section5 .gallery img {
+  width: 100%;
+  height: 60vh;
+}
+
+.footer {
+  width: 100%;
+  height: 70vh;
+  background-color: rgb(71, 71, 71);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.footer .staff {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: "";
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.footer .staff .person {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: "";
+  justify-content: "";
+  align-items: center;
+  align-content: "";
+  width: 25%;
+}
+.footer .staff .person img {
+  border-radius: 50%;
+  width: 50%;
+}
+.footer .staff .person p {
+  font-size: 13px;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  nav .nav-container {
+    margin: 0;
+  }
+  nav .nav-container ul li a {
+    text-transform: capitalize;
+  }
+  .content .text button {
+    width: 50%;
+  }
+  .section1 {
+    height: auto;
+    margin: 2rem 0;
+  }
+  .section1 .section {
+    width: 100%;
+  }
+  .container {
+    height: auto;
+    margin: 2rem 0;
+  }
+  .container .text {
+    margin: 0 3rem;
+  }
+  .container .text button {
+    width: 50%;
+  }
+  .container .image {
+    margin: 0.5rem;
+  }
+  .section3 {
+    height: auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section3 .section {
+    padding: 1rem;
+  }
+  .section5 .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer {
+    height: auto;
+    padding: 0.5rem;
+  }
+  .footer .staff {
+    flex-direction: column;
+  }
+  .footer .staff .person {
+    width: 100%;
+    margin: 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=lab2.css.map */
